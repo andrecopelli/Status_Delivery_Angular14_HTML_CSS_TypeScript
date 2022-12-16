@@ -1,0 +1,26 @@
+<div class="row justify-content-around">
+    <div class="col-3 mb-4">
+        <h2>Status da Entrega</h2>
+    </div>
+</div>
+
+<div class="row justify-content-around mt-3">
+    <div class="circulo" [ngClass]="opcao === '1' ? 'circulo-ativo' : 'circulo'">1</div>
+    <div class="circulo" [ngClass]="opcao === '2' ? 'circulo-ativo' : 'circulo'">2</div>
+    <div class="circulo" [ngClass]="opcao === '3' ? 'circulo-ativo' : 'circulo'">3</div>
+    <div class="circulo" [ngClass]="opcao === '4' ? 'circulo-ativo' : 'circulo'">4</div>
+</div>
+
+<div class="row justify-content-start mt-5 ms-5 ps-3">
+    <div class="col-3">
+        <ol>
+            <ul [ngClass]="opcao === '1' ? 'negrito' : ''">1 - Pedido Recebido</ul>
+            <ul [ngClass]="opcao === '2' ? 'negrito' : ''">2 - Em preparação</ul>
+            <ul [ngClass]="opcao === '3' ? 'negrito' : ''">3 - Pronto</ul>
+            <ul [ngClass]="opcao === '4' ? 'negrito' : ''">4 - Entregue</ul>
+        </ol>
+    </div>
+</div>
+
+<app-atualizador (onChange)="atualizaComponente($event)"></app-atualizador>
+
